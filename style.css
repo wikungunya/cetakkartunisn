@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 450px;
+    width: 100%;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button, #btnUnduh {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover, #btnUnduh:hover {
+    background-color: #004085;
+}
+
+/* Desain Kartu Ukuran Standar KTP/ID Card */
+.kartu-box {
+    width: 400px;
+    height: 240px;
+    background: linear-gradient(135deg, #0056b3 20%, #0088ff 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    position: relative;
+    box-sizing: border-box;
+}
+
+.kartu-header {
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.kartu-header h3 {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.kartu-header p {
+    margin: 2px 0 0 0;
+    font-size: 9px;
+    opacity: 0.9;
+}
+
+.kartu-body {
+    display: flex;
+    gap: 15px;
+}
+
+.foto-placeholder {
+    width: 75px;
+    height: 100px;
+    background-color: #e0e0e0;
+    border: 2px solid white;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.biodata p {
+    margin: 4px 0;
+    font-size: 13px;
+}
+
+.kartu-footer {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 9px;
+    opacity: 0.8;
+}
