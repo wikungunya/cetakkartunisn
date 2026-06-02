@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembuat Kartu NISN Otomatis</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Menggunakan library html2canvas untuk mengubah HTML menjadi Gambar -->
+    <script src="https://cloudflare.com"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Input Data Siswa</h2>
+        <form id="nisnForm">
+            <input type="text" id="inputNama" placeholder="Nama Lengkap Siswa" required>
+            <input type="text" id="inputNisn" placeholder="Nomor NISN (10 Digit)" maxlength="10" required>
+            <input type="text" id="inputTTL" placeholder="Tempat, Tanggal Lahir" required>
+            <input type="text" id="inputSekolah" placeholder="Nama Sekolah Asal" required>
+            <button type="button" onclick="generateKartu()">Buat Kartu</button>
+        </form>
+
+        <!-- Area Preview Kartu -->
+        <div id="kartuPreview" class="kartu-box" style="display: none;">
+            <div class="kartu-header">
+                <h3>KARTU NOMOR INDUK SISWA NASIONAL</h3>
+                <p>Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi</p>
+            </div>
+            <div class="kartu-body">
+                <div class="foto-placeholder">Foto 3x4</div>
+                <div class="biodata">
+                    <p><strong>Nama:</strong> <span id="cardNama">-</span></p>
+                    <p><strong>NISN:</strong> <span id="cardNisn">-</span></p>
+                    <p><strong>TTL:</strong> <span id="cardTTL">-</span></p>
+                    <p><strong>Sekolah:</strong> <span id="cardSekolah">-</span></p>
+                </div>
+            </div>
+            <div class="kartu-footer">
+                <p>Kartu ini berlaku selama menjadi siswa aktif</p>
+            </div>
+        </div>
+
+        <button id="btnUnduh" style="display: none;" onclick="unduhKartu()">Unduh Kartu (PNG)</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
